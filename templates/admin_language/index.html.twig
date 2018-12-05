@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Langues{% endblock %}
+
+{% block body %}
+
+    {% for result in results %}
+
+        {{ result.name }}
+
+    {% endfor %}
+
+{% endblock %}

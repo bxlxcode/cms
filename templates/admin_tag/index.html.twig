@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tags{% endblock %}
+
+{% block body %}
+
+    {% for result in results %}
+
+        {{ result.name }}
+
+    {% endfor %}
+
+
+{% endblock %}

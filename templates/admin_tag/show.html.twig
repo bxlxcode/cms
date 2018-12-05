@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ name }} {% endblock %}
+
+{% block body %}
+
+    {% for result in results %}
+
+        <div class="card">
+            <img class="card-img-top" src="{{ asset('uploads/pictures/' ~ result.url) | imagine_filter('my_widen_filter') }}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{ result.name }}</h5>
+
+                <p class="card-text">
+                    ssss
+                </p>
+                <a href="{{ path('admin_image_edit', {'id':result.id}) }}" class="btn btn-primary">Editer</a>
+            </div>
+        </div>
+
+    {% endfor %}
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}edit{% endblock %}
+{% block facebook %}{{ asset('uploads/pictures/' ~ url) | imagine_filter('facebook') }}{% endblock %}
+
+{% block body %}
+
+    <img class="card-img-top" src="{{ asset('uploads/pictures/' ~ url) | imagine_filter('my_widen_filter') }}" alt="Card image cap">
+
+    {{ form_start(form) }}
+
+    {{ form_row(form.name) }}
+
+    {{ form_row(form.copyright) }}
+
+    {{ form_row(form.Tags) }}
+
+    {{ form_row(form.isPublish) }}
+
+    <button type="submit">Mettre à jour</button>
+
+    {{ form_end(form) }}
+
+{% endblock %}

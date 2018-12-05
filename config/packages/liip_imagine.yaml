@@ -1,0 +1,65 @@
+liip_imagine:
+  #    # valid drivers options include "gd" or "gmagick" or "imagick"
+  #   driver: "imagick"
+  #
+  filter_sets:
+
+    squared_thumbnail:
+      jpeg_quality:          85
+      filters:
+        thumbnail:
+          size:          [500, 500]
+          mode:          outbound
+          allow_upscale: true
+    cinema:
+      jpeg_quality:          85
+      filters:
+        thumbnail:
+          size:          [1080, 720]
+          mode:          outbound
+          allow_upscale: true
+
+    cinema_crop:
+      jpeg_quality:          85
+      filters:
+        crop:
+          size: [ 1080, 720 ]
+          start: [ 0, 0 ]
+
+
+    facebook:
+      jpeg_quality:          85
+      filters:
+        crop:
+          size: [ 1200, 630 ]
+          start: [ 0, 0 ]
+
+    my_widen_filter:
+      jpeg_quality:          100
+      filters:
+        relative_resize:
+          widen: 360
+
+
+    my_widen:
+      jpeg_quality:          100
+      filters:
+        relative_resize:
+          widen: 940
+
+    # name our filter set "my_watermark_filter"
+    my_watermark_filter:
+      jpeg_quality:          100
+      filters:
+
+        # use and setup the "watermark" filter
+        watermark:
+
+          # path to the watermark file (prepended with "%kernel.root_dir%")
+          image: watermark.png
+
+          # size of the water mark relative to the input image
+          size: 0.5
+
+          # set the position of the watermark
+          position: center

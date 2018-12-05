@@ -1,0 +1,14 @@
+# Read the documentation: https://github.com/1up-lab/OneupUploaderBundle/blob/master/Resources/doc/index.md
+oneup_uploader:
+    mappings:
+        # This is a mapping example, remove it and create your own mappings.
+        gallery:
+            frontend: blueimp # or any uploader you use in the frontend
+            enable_progress: true
+            use_orphanage: false
+            max_size: 200M
+              #storage:
+            #directory: "%kernel.root_dir%/../data/uploads/"
+
+            storage:
+                directory: '%kernel.project_dir%/public/uploads/pictures'

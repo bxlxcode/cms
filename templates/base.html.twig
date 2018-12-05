@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <meta name="og:image" property="og:image" content="{% block facebook %}{% endblock %}" />
+
+        <title>{% block title %}Welcome!{% endblock %}</title>
+
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

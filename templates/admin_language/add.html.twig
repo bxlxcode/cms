@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajouter une langue{% endblock %}
+
+{% block body %}
+
+    {{ form_start(form) }}
+
+    {{ form_row(form.name) }}
+
+    {{ form_row(form.iso) }}
+
+    {{ form_row(form.icon) }}
+
+    {{ form_row(form.isPublish) }}
+
+    <button type="submit">Ajouter une langue</button>
+
+    {{ form_end(form) }}
+
+{% endblock %}
