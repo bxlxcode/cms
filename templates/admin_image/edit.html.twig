@@ -1,24 +1,64 @@
-{% extends 'base.html.twig' %}
+{% extends 'admin.html.twig' %}
 
 {% block title %}edit{% endblock %}
+{% block elementTitle %}Photo{% endblock %}
+
+
 {% block facebook %}{{ asset('uploads/pictures/' ~ url) | imagine_filter('facebook') }}{% endblock %}
 
 {% block body %}
 
-    <img class="card-img-top" src="{{ asset('uploads/pictures/' ~ url) | imagine_filter('my_widen_filter') }}" alt="Card image cap">
 
-    {{ form_start(form) }}
 
-    {{ form_row(form.name) }}
 
-    {{ form_row(form.copyright) }}
 
-    {{ form_row(form.Tags) }}
+    <section id="basic-form-layouts">
+        <div class="row match-height">
+            <div class="col-md-6">
+                <div class="card" style="height: auto;">
+                    <div class="card-header">
 
-    {{ form_row(form.isPublish) }}
+                        {{ form_start(form) }}
 
-    <button type="submit">Mettre à jour</button>
+                        {{ form_row(form.name) }}
 
-    {{ form_end(form) }}
+                        {{ form_row(form.copyright) }}
+
+                        {{ form_row(form.gallery) }}
+                        {{ form_row(form.slider) }}
+
+                        {{ form_row(form.isPublish) }}
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="la la-check-square-o"></i> Mettre à jour la photo
+                            </button>
+                        </div>
+
+                        {{ form_end(form) }}
+                    </div>
+
+
+                </div>
+            </div>
+
+
+            <div class="col-md-6">
+
+                <div class="card">
+                    <div class="card-content">
+                        <img class="card-img-top img-fluid" src="{{ asset('uploads/pictures/' ~ url) | imagine_filter('my_widen_filter') }}" alt="Card image cap">
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+    </section>
+
 
 {% endblock %}

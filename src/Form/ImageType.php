@@ -3,7 +3,8 @@
 namespace App\Form;
 
 use App\Entity\Image;
-use App\Entity\Tag;
+use App\Entity\Gallery;
+use App\Entity\Slider;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -18,8 +19,16 @@ class ImageType extends AbstractType
             ->add('name')
             ->add('copyright')
 
-            ->add('Tags', EntityType::class,[
-                'class' => Tag::class,
+            ->add('gallery', EntityType::class,[
+                'class' => Gallery::class,
+                'choice_label' => 'name',
+                'multiple' => true,
+                'expanded' => true,
+            ])
+
+
+            ->add('slider', EntityType::class,[
+                'class' => Slider::class,
                 'choice_label' => 'name',
                 'multiple' => true,
                 'expanded' => true,

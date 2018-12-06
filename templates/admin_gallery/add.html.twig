@@ -1,0 +1,56 @@
+{% extends 'admin.html.twig' %}
+
+{% block title %}Ajouter une gallery{% endblock %}
+{% block elementTitle %}Ajouter une gallery{% endblock %}
+
+{% block body %}
+
+
+
+    <section id="basic-form-layouts">
+        <div class="row match-height">
+            <div class="col-md-12">
+                <div class="card" style="height: auto;">
+                    <div class="card-header">
+                        <h4 class="card-title" id="basic-layout-form">Nouvelle gallery</h4>
+                        <a class="heading-elements-toggle">
+                            <i class="la la-ellipsis-v font-medium-3"></i>
+                        </a>
+
+                    </div>
+                    <div class="card-content collapse show">
+                        <div class="card-body">
+                            <div class="card-text">
+                                <p>Lorem ipsum</p>
+                            </div>
+
+                            {{ form_start(form) }}
+                            {{ form_row(form.name) }}
+                            {{ form_row(form.isPublish) }}
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="la la-check-square-o"></i> Ajouter une nouvelle gallery
+                                </button>
+                            </div>
+
+                            {{ form_end(form) }}
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+        </div>
+
+
+
+
+    </section>
+
+{% endblock %}

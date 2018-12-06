@@ -1,21 +1,58 @@
-{% extends 'base.html.twig' %}
+{% extends 'admin.html.twig' %}
 
 {% block title %}Ajouter une langue{% endblock %}
+{% block elementTitle %}Ajouter une langue{% endblock %}
 
 {% block body %}
 
-    {{ form_start(form) }}
 
-    {{ form_row(form.name) }}
 
-    {{ form_row(form.iso) }}
+    <section id="basic-form-layouts">
+        <div class="row match-height">
+            <div class="col-md-12">
+                <div class="card" style="height: auto;">
+                    <div class="card-header">
+                        <h4 class="card-title" id="basic-layout-form">Nouvelle langue</h4>
+                        <a class="heading-elements-toggle">
+                            <i class="la la-ellipsis-v font-medium-3"></i>
+                        </a>
 
-    {{ form_row(form.icon) }}
+                    </div>
+                    <div class="card-content collapse show">
+                        <div class="card-body">
+                            <div class="card-text">
+                                <p>Lorem ipsum</p>
+                            </div>
 
-    {{ form_row(form.isPublish) }}
+                            {{ form_start(form) }}
+                            {{ form_row(form.name) }}
+                            {{ form_row(form.iso) }}
+                            {{ form_row(form.icon) }}
+                            {{ form_row(form.isPublish) }}
 
-    <button type="submit">Ajouter une langue</button>
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="la la-check-square-o"></i> Ajouter une nouvelle langue
+                                </button>
+                            </div>
 
-    {{ form_end(form) }}
+                            {{ form_end(form) }}
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+        </div>
+
+
+
+
+    </section>
 
 {% endblock %}

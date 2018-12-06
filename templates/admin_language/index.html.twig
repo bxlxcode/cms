@@ -1,13 +1,70 @@
-{% extends 'base.html.twig' %}
+{% extends 'admin.html.twig' %}
 
 {% block title %}Langues{% endblock %}
 
+{% block elementTitle %}Langues{% endblock %}
+
 {% block body %}
 
-    {% for result in results %}
+    <div class="row">
 
-        {{ result.name }}
+        <div class="col-12">
 
-    {% endfor %}
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Liste des langues</h4>
+                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+
+                </div>
+
+                <div class="card-content collapse show">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>id</th>
+                                    <th>name</th>
+                                    <th>flag</th>
+                                    <th>status</th>
+                                    <th>action</th>
+                                </tr>
+
+                                </thead>
+                                <tbody>
+
+                                {% for result in results %}
+                                    <tr>
+                                        <th scope="row">{{ result.id }}</th>
+                                        <td>{{ result.name }}</td>
+                                        <td><img src="{{ result.icon }}"></td>
+
+                                        <td>
+                                            {{ result.isPublish}}
+                                        </td>
+
+                                        <td>
+                                            {{ result.isPublish}}
+                                        </td>
+                                    </tr>
+
+                                {% endfor %}
+
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <a href="{{ path('admin_language_add') }}"><button type="button" class="btn btn-outline-primary btn-min-width mr-1 mb-1">Ajouter une langue</button></a>
+
+        </div>
+    </div>
+    </div>
 
 {% endblock %}

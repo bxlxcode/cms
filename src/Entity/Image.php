@@ -1,11 +1,11 @@
 <?php
 
 namespace App\Entity;
-use Gedmo\Mapping\Annotation as Gedmo;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ImageRepository")
@@ -52,13 +52,19 @@ class Image
     private $isPublish;
 
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Tag", inversedBy="images")
+     * @ORM\ManyToMany(targetEntity="App\Entity\Gallery", inversedBy="images")
      */
-    private $Tags;
+    private $gallery;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\Slider", inversedBy="images")
+     */
+    private $slider;
 
     public function __construct()
     {
-        $this->Tags = new ArrayCollection();
+        $this->gallery = new ArrayCollection();
+        $this->slider = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -125,26 +131,52 @@ class Image
     }
 
     /**
-     * @return Collection|Tag[]
+     * @return Collection|Gallery[]
      */
-    public function getTags(): Collection
+    public function getGallery(): Collection
     {
-        return $this->Tags;
+        return $this->gallery;
     }
 
-    public function addTag(Tag $tag): self
+    public function addGallery(Gallery $gallery): self
     {
-        if (!$this->Tags->contains($tag)) {
-            $this->Tags[] = $tag;
+        if (!$this->gallery->contains($gallery)) {
+            $this->gallery[] = $gallery;
         }
 
         return $this;
     }
 
-    public function removeTag(Tag $tag): self
+    public function removeGallery(Gallery $gallery): self
     {
-        if ($this->Tags->contains($tag)) {
-            $this->Tags->removeElement($tag);
+        if ($this->gallery->contains($gallery)) {
+            $this->gallery->removeElement($gallery);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Slider[]
+     */
+    public function getSlider(): Collection
+    {
+        return $this->slider;
+    }
+
+    public function addSlider(Slider $slider): self
+    {
+        if (!$this->slider->contains($slider)) {
+            $this->slider[] = $slider;
+        }
+
+        return $this;
+    }
+
+    public function removeSlider(Slider $slider): self
+    {
+        if ($this->slider->contains($slider)) {
+            $this->slider->removeElement($slider);
         }
 
         return $this;

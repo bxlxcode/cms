@@ -38,7 +38,7 @@ liip_imagine:
       jpeg_quality:          100
       filters:
         relative_resize:
-          widen: 360
+          widen: 600
 
 
     my_widen:
