@@ -8,9 +8,9 @@ use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\LanguageRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\HomeRepository")
  */
-class Language
+class Home
 {
     /**
      * @ORM\Id()
@@ -32,27 +32,17 @@ class Language
     private $updatedAt;
 
     /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $description;
+
+    /**
      * @ORM\Column(type="string", length=255)
      */
     private $name;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $iso;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $icon;
-
-    /**
-     * @ORM\Column(type="boolean")
-     */
-    private $isPublish;
-
-    /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Site", mappedBy="language")
+     * @ORM\ManyToMany(targetEntity="App\Entity\Site", mappedBy="home")
      */
     private $sites;
 
@@ -76,6 +66,18 @@ class Language
         return $this->updatedAt;
     }
 
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(?string $description): self
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
     public function getName(): ?string
     {
         return $this->name;
@@ -84,42 +86,6 @@ class Language
     public function setName(string $name): self
     {
         $this->name = $name;
-
-        return $this;
-    }
-
-    public function getIso(): ?string
-    {
-        return $this->iso;
-    }
-
-    public function setIso(string $iso): self
-    {
-        $this->iso = $iso;
-
-        return $this;
-    }
-
-    public function getIcon(): ?string
-    {
-        return $this->icon;
-    }
-
-    public function setIcon(string $icon): self
-    {
-        $this->icon = $icon;
-
-        return $this;
-    }
-
-    public function getIsPublish(): ?bool
-    {
-        return $this->isPublish;
-    }
-
-    public function setIsPublish(bool $isPublish): self
-    {
-        $this->isPublish = $isPublish;
 
         return $this;
     }
@@ -136,7 +102,7 @@ class Language
     {
         if (!$this->sites->contains($site)) {
             $this->sites[] = $site;
-            $site->addLanguage($this);
+            $site->addHome($this);
         }
 
         return $this;
@@ -146,7 +112,7 @@ class Language
     {
         if ($this->sites->contains($site)) {
             $this->sites->removeElement($site);
-            $site->removeLanguage($this);
+            $site->removeHome($this);
         }
 
         return $this;

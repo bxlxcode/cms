@@ -47,11 +47,6 @@ class Image
     private $copyright;
 
     /**
-     * @ORM\Column(type="boolean")
-     */
-    private $isPublish;
-
-    /**
      * @ORM\ManyToMany(targetEntity="App\Entity\Gallery", inversedBy="images")
      */
     private $gallery;
@@ -60,6 +55,11 @@ class Image
      * @ORM\ManyToMany(targetEntity="App\Entity\Slider", inversedBy="images")
      */
     private $slider;
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $isPublish;
 
     public function __construct()
     {
@@ -118,18 +118,6 @@ class Image
         return $this;
     }
 
-    public function getIsPublish(): ?bool
-    {
-        return $this->isPublish;
-    }
-
-    public function setIsPublish(bool $isPublish): self
-    {
-        $this->isPublish = $isPublish;
-
-        return $this;
-    }
-
     /**
      * @return Collection|Gallery[]
      */
@@ -178,6 +166,18 @@ class Image
         if ($this->slider->contains($slider)) {
             $this->slider->removeElement($slider);
         }
+
+        return $this;
+    }
+
+    public function getIsPublish(): ?bool
+    {
+        return $this->isPublish;
+    }
+
+    public function setIsPublish(bool $isPublish): self
+    {
+        $this->isPublish = $isPublish;
 
         return $this;
     }

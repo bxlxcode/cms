@@ -1,9 +1,10 @@
 {% extends 'admin.html.twig' %}
 
-{% block title %}Editer la langue{% endblock %}
-{% block elementTitle %}Editer la langue{% endblock %}
+{% block title %}Ajouter un site{% endblock %}
+{% block elementTitle %}Editer un site{% endblock %}
 
 {% block body %}
+
 
 
     <section id="basic-form-layouts">
@@ -24,18 +25,15 @@
                             </div>
 
                             {{ form_start(form) }}
-
                             {{ form_row(form.name) }}
-
-                            {{ form_row(form.iso) }}
-
-                            {{ form_row(form.icon) }}
-
-                            {{ form_row(form.isPublish) }}
+                            {{ form_row(form.logo) }}
+                            {{ form_row(form.description) }}
+                            {{ form_row(form.home) }}
+                            {{ form_row(form.language) }}
 
                             <div class="form-actions">
                                 <button type="submit" class="btn btn-primary">
-                                    <i class="la la-check-square-o"></i> Modifier la langue
+                                    <i class="la la-check-square-o"></i> Mettre à jour le site
                                 </button>
                             </div>
 
@@ -58,6 +56,5 @@
 
     </section>
 
-
-
 {% endblock %}
+

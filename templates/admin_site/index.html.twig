@@ -1,18 +1,17 @@
 {% extends 'admin.html.twig' %}
 
-{% block title %}Langues{% endblock %}
+{% block title %}Sites{% endblock %}
 
-{% block elementTitle %}Langues{% endblock %}
+{% block elementTitle %}Sites{% endblock %}
 
 {% block body %}
 
     <div class="row">
 
         <div class="col-12">
-
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title">Liste des langues</h4>
+                    <h4 class="card-title">Liste des sites</h4>
                     <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
 
                 </div>
@@ -25,8 +24,7 @@
                                 <tr>
                                     <th>id</th>
                                     <th>name</th>
-                                    <th>flag</th>
-                                    <th>status</th>
+                                    <th>nombre</th>
                                     <th>action</th>
                                 </tr>
 
@@ -37,15 +35,8 @@
                                     <tr>
                                         <th scope="row">{{ result.id }}</th>
                                         <td>{{ result.name }}</td>
-                                        <td><img src="{{ asset('flags/' ~ result.icon) }}"></td>
-
-                                        <td>
-                                            {{ result.isPublish}}
-                                        </td>
-
-                                        <td>
-                                            {{ result.isPublish}}
-                                        </td>
+                                        <td>{{ result.name }}</td>
+                                        <td>{{ result.name }}</td>
                                     </tr>
 
                                 {% endfor %}
@@ -56,15 +47,12 @@
                             </table>
                         </div>
                     </div>
+                    </div>
                 </div>
 
+            <a href="{{ path('admin_gallery_add') }}"><button type="button" class="btn btn-outline-primary btn-min-width mr-1 mb-1">Ajouter un site</button></a>
 
             </div>
-
-            <a href="{{ path('admin_language_add') }}"><button type="button" class="btn btn-outline-primary btn-min-width mr-1 mb-1">Ajouter une langue</button></a>
-
         </div>
     </div>
-    </div>
-
 {% endblock %}
