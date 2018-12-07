@@ -1,18 +1,68 @@
 {% extends 'admin.html.twig' %}
 
-{% block title %}Ajouter un site{% endblock %}
+{% block title %}Editer un site{% endblock %}
 {% block elementTitle %}Editer un site{% endblock %}
 
 {% block body %}
 
-
+    {{ form_start(form) }}
 
     <section id="basic-form-layouts">
+
         <div class="row match-height">
             <div class="col-md-12">
                 <div class="card" style="height: auto;">
                     <div class="card-header">
-                        <h4 class="card-title" id="basic-layout-form">Editer</h4>
+                        <h4 class="card-title" id="basic-layout-form">Nouveau site</h4>
+                        <a class="heading-elements-toggle">
+                            <i class="la la-ellipsis-v font-medium-3"></i>
+                        </a>
+
+                    </div>
+
+
+
+                    <div class="card-body">
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active show" id="baseIcon-tab1" data-toggle="tab" aria-controls="tabIcon1" href="#tabIcon1" aria-expanded="true"><i class="ft-aperture"></i> Francais</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="baseIcon-tab2" data-toggle="tab" aria-controls="tabIcon2" href="#tabIcon2" aria-expanded="false"><i class="ft-bell"></i> English</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="baseIcon-tab3" data-toggle="tab" aria-controls="tabIcon3" href="#tabIcon3" aria-expanded="false"><i class="ft-compass"></i> Néerlandais</a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content px-1 pt-1">
+
+                            <div role="tabpanel" class="tab-pane active show" id="tabIcon1" aria-expanded="true" aria-labelledby="baseIcon-tab1">
+                                {{ form_row(form.name) }}
+                                {{ form_row(form.logo) }}
+                                {{ form_row(form.description) }}
+                            </div>
+
+                            <div class="tab-pane" id="tabIcon2" aria-labelledby="baseIcon-tab2">
+                                {{ form_start(formen) }}
+                                {{ form_end(formen) }}
+                            </div>
+
+                            <div class="tab-pane" id="tabIcon3" aria-labelledby="baseIcon-tab3">
+                                {{ form_start(formnl) }}
+                                {{ form_end(formnl) }}
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+                <div class="card" style="height: auto;">
+                    <div class="card-header">
+                        <h4 class="card-title" id="basic-layout-form">Configuration</h4>
                         <a class="heading-elements-toggle">
                             <i class="la la-ellipsis-v font-medium-3"></i>
                         </a>
@@ -20,14 +70,8 @@
                     </div>
                     <div class="card-content collapse show">
                         <div class="card-body">
-                            <div class="card-text">
-                                <p>Lorem ipsum</p>
-                            </div>
 
-                            {{ form_start(form) }}
-                            {{ form_row(form.name) }}
-                            {{ form_row(form.logo) }}
-                            {{ form_row(form.description) }}
+
                             {{ form_row(form.home) }}
                             {{ form_row(form.language) }}
 
@@ -36,10 +80,6 @@
                                     <i class="la la-check-square-o"></i> Mettre à jour le site
                                 </button>
                             </div>
-
-                            {{ form_end(form) }}
-
-
 
 
                         </div>
@@ -51,10 +91,8 @@
         </div>
         </div>
 
-
-
-
     </section>
 
-{% endblock %}
+    {{ form_end(form) }}
 
+{% endblock %}

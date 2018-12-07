@@ -19,11 +19,13 @@ class AppFixtures extends Fixture
                 $faker = Faker\Factory::create('fr_FR');
 
                 for ($i = 0; $i < 1; $i++) {
+
                     $site = new Site();
                     $site->setName($faker->colorName);
                     $site->setLogo('logo');
                     $site->setDescription('descr');
-                    $site->setTranslatableLocale('fr');
+
+                    //$site->setTranslatableLocale('en');
 
                     $manager->persist($site);
                     $manager->flush();

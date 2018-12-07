@@ -6,7 +6,6 @@
 {% block body %}
 
 
-
     <section id="basic-form-layouts">
         <div class="row match-height">
             <div class="col-md-12">
@@ -24,10 +23,39 @@
                                 <p>Lorem ipsum</p>
                             </div>
 
+
+
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item">
+                                        <a class="nav-link active show" id="baseIcon-tab1" data-toggle="tab" aria-controls="tabIcon1" href="#tabIcon1" aria-expanded="true"><i class="ft-aperture"></i> Francais</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content px-1 pt-1">
+                                    <div role="tabpanel" class="tab-pane active show" id="tabIcon1" aria-expanded="true" aria-labelledby="baseIcon-tab1">
+                                        {{ form_row(form.name) }}
+                                        {{ form_row(form.logo) }}
+                                        {{ form_row(form.description) }}
+                                    </div>
+                                </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="height: auto;">
+                    <div class="card-header">
+                        <h4 class="card-title" id="basic-layout-form">Configuration</h4>
+                        <a class="heading-elements-toggle">
+                            <i class="la la-ellipsis-v font-medium-3"></i>
+                        </a>
+
+                    </div>
+                    <div class="card-content collapse show">
+                        <div class="card-body">
+
+
+
                             {{ form_start(form) }}
-                            {{ form_row(form.name) }}
-                            {{ form_row(form.logo) }}
-                            {{ form_row(form.description) }}
                             {{ form_row(form.home) }}
                             {{ form_row(form.language) }}
 
