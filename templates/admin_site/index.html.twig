@@ -8,8 +8,6 @@
 
     <div class="row">
 
-
-
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
@@ -33,12 +31,18 @@
                                 </thead>
                                 <tbody>
 
+
                                 {% for result in results %}
+
+
+
                                     <tr>
                                         <th scope="row">{{ result.id }}</th>
-                                        <td>{{ result.name }}</td>
-                                        <td>{{ result.name }}</td>
-                                        <td>{{ result.name }}</td>
+
+
+                                        <td>name</td>
+                                        <td>nombre</td>
+                                        <td>action</td>
                                     </tr>
 
                                 {% endfor %}

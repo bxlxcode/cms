@@ -21,12 +21,13 @@ class SiteType extends AbstractType
         $builder
 
             ->add('translations', TranslationsType::class, [
+                'label' => '...............',
                 'fields' => [                                           // [2]
                     'name' => [                                        // [3.a]
                         // 'field_type' => 'textarea',                  // [4]
-                        'label' => 'title',                             // [4]
+                        'label' => 'nom',                             // [4]
                         'locale_options' => [                           // [3.b]
-                            'es' => ['label' => 'descripción'],         // [4]
+                            //'es' => ['label' => 'descripción'],         // [4]
                             //'pt' => ['display' => false],
                             //'it' => ['display' => false],
                             //'de' => ['display' => false],
@@ -36,12 +37,13 @@ class SiteType extends AbstractType
                         ]
                     ]
                 ],
-                // 'excluded_fields' => ['details']            // [2]
+                'excluded_fields' => ['slug']            // [2]
             ])
 
             ->add('home', EntityType::class,[
                 'class' => Home::class,
                 'choice_label' => 'name',
+                'label' => 'Zones de la home page',
                 'multiple' => true,
                 'expanded' => true,
             ])
@@ -49,6 +51,7 @@ class SiteType extends AbstractType
             ->add('language', EntityType::class,[
                 'class' => Language::class,
                 'choice_label' => 'name',
+                'label' => 'Langues de consultation',
                 'multiple' => true,
                 'expanded' => true,
             ])

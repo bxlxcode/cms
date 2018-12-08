@@ -26,16 +26,9 @@
 
                             {{ form_start(form) }}
 
-                            {{ form_row(form.home) }}
-                            {{ form_row(form.language) }}
+                            {{ form_row(form.translations) }}
 
-                            <div class="form-actions">
-                                <button type="submit" class="btn btn-primary">
-                                    <i class="la la-check-square-o"></i> Ajouter un nouveau site
-                                </button>
-                            </div>
 
-                            {{ form_end(form) }}
 
 
                         </div>
@@ -54,7 +47,16 @@
                         <div class="card-body">
 
 
+                            {{ form_row(form.home) }}
+                            {{ form_row(form.language) }}
 
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="la la-check-square-o"></i> Ajouter un nouveau site
+                                </button>
+                            </div>
+
+                            {{ form_end(form) }}
 
 
                         </div>

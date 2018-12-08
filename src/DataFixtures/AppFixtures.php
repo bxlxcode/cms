@@ -4,6 +4,7 @@ namespace App\DataFixtures;
 
 use App\Entity\Category;
 use App\Entity\CategoryTranslation;
+use App\Entity\Home;
 use App\Entity\Image;
 use App\Entity\Language;
 use App\Entity\Gallery;
@@ -18,6 +19,53 @@ class AppFixtures extends Fixture
     public function load(ObjectManager $manager)
     {
 
+        // doctrine:fixtures:load --fixtures=src/PMI/UserBundle/DataFixtures/ORM --append
+        $languageNames = [
+            'fr' => 'Francais',
+            'nl' => 'Néerlandais',
+            'en' => 'Anglais',
+            'de' => 'Allemand',
+            'es' => 'Espagnol',
+            'it' => 'Italien',
+            'pt' => 'Portugais',
+            'cn' => 'Chinois',
+            'jp' => 'Japonais',
+            'ar' => 'Arabe',
+            'ru' => 'Russe'
+        ];
+
+
+        $homezones = [
+            'Menu Principal'     => 'Affiche le menu principal lié au site',
+            'Menu Professionel'  => 'Affiche le menu profesionnel pour naviguer sur les autres sites',
+            'Header'            => '',
+            'Discovery'         => '',
+            'Thèmes'            => '',
+            'Recherche'         => ''
+        ];
+
+
+        foreach ($homezones as $key => $value) {
+            $home = new Home();
+            $home->setName($key)
+                ->setDescription($value);
+
+            $manager->persist($home);
+            $manager->flush();
+        }
+
+        foreach ($languageNames as $key => $value) {
+            $language = new Language();
+            $language->setName($value)
+                ->setIsPublish(true)
+                ->setIso($key)
+                ->setIcon($key.'.png');
+
+            $manager->persist($language);
+            $manager->flush();
+        }
+
+        /*
         $category = new Category;
 
         $category->translate('fr')->setTitle('Chaussures');
@@ -30,6 +78,7 @@ class AppFixtures extends Fixture
 
         $category->translate('en')->getTitle();
         $manager->flush();
+        */
 
         /*
 

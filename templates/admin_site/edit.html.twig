@@ -37,13 +37,17 @@
 
 
                             {{ form_start(form) }}
-                            {{ form_end(form) }}
+                            {{ form_row(form.translations) }}
+                            {{ form_row(form.home) }}
+                            {{ form_row(form.language) }}
 
                             <div class="form-actions">
                                 <button type="submit" class="btn btn-primary">
-                                    <i class="la la-check-square-o"></i> Mettre à jour le site
+                                    <i class="la la-check-square-o"></i> Mettre à jour
                                 </button>
                             </div>
+
+                            {{ form_end(form) }}
 
 
                         </div>
@@ -57,6 +61,5 @@
 
     </section>
 
-    {{ form_end(form) }}
 
 {% endblock %}
