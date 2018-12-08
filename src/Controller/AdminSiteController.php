@@ -42,37 +42,31 @@ class AdminSiteController extends AbstractController {
 
         if ($form->isSubmitted() && $form->isValid()) {
 
-            // gérer les traductions ici
-            $site->setTranslatableLocale('en');
-            $objectManager->persist($site);
-            $objectManager->flush();
+            /*
+            $repository = $objectManager->getRepository('Gedmo\\Translatable\\Entity\\Translation');
 
-            $siteTranslation = $site;
+            $site
+                ->setName($site->getName())
+                ->setDescription($site->getDescription())
+                ->setLogo($site->getLogo())
+                ->setTranslatableLocale('fr');
 
-            // création de traduction
             foreach ($site->getLanguage() as $key => $value) {
 
                 if ($value->getIso() != 'fr') {
-                    if ($value->getIso() != 'en') {
-
-                        $siteTranslation->setName('nom en ' . $value->getIso())
-                        ->setLogo('logo en ' . $value->getIso())
-                        ->setDescription('description en ' . $value->getIso())
-                        ->setTranslatableLocale($value->getIso()); // change locale
-
-                   $objectManager->persist($siteTranslation);
-                   $objectManager->flush();
-                    }
+                    $repository->translate($site, 'name', $value->getIso(), '')
+                        ->translate($site, 'description', $value->getIso(), '')
+                        ->translate($site, 'logo', $value->getIso(), '');
                 }
             }
+            */
 
-           return $this->redirectToRoute('admin_site');
+            $objectManager->persist($site);
+            $objectManager->flush();
+
+           return $this->redirectToRoute('admin_site_edit',['id' => $site->getId()]);
         }
-
-        return $this->render('admin_site/add.html.twig', [
-            'form' => $form->createView(),
-        ]);
-
+        return $this->render('admin_site/add.html.twig', ['form' => $form->createView(),]);
     }
 
     /**
@@ -80,14 +74,20 @@ class AdminSiteController extends AbstractController {
      */
     public function edit(Site $site, Request $request, ObjectManager $objectManager, EntityManagerInterface $entityManager) {
 
-        // gérer les traductions ici
+        // aller chercher la traduction
+
+        // création du formulaire de l'entité
         $form = $this->createForm(SiteType::class, $site);
         $form->handleRequest($request);
+
+
+        /*
 
         // récupérer les traductions
         $repository = $objectManager->getRepository('Gedmo\Translatable\Entity\Translation');
         $translations = $repository->findTranslations($site);
 
+        // création des formulaires de traductions
         $forms = [];
 
         foreach ($translations as $key => $value) {
@@ -99,33 +99,44 @@ class AdminSiteController extends AbstractController {
             $forms[$key] = $this->container->get('form.factory')->createNamed('form' . $key, SiteTranslationType::class, $translationbis);
         }
 
+        */
         if ($form->isSubmitted() && $form->isValid()) {
 
             // gérer les traductions ici
 
             // afficher les modifications qui sont faites dans des bêtes champs, mais pas dans la relation
-            $uow = $entityManager->getUnitOfWork();
-            $uow->computeChangeSets();
-            $origine = $uow->getEntityChangeSet($site);
-            dump($origine);
+            //$uow = $entityManager->getUnitOfWork();
+            //$uow->computeChangeSets();
+            //$origine = $uow->getEntityChangeSet($site);
+            //dump($origine);
 
             // affiche les modifications qui sont faites dans la reation
-            $second = ($uow->getScheduledCollectionUpdates());
-            dump($second);
+            //$second = ($uow->getScheduledCollectionUpdates());
+            //dump($second);
+
+            //dump($form);
 
             // fin de la gestion des traductions
 
             $objectManager->persist($site);
             $objectManager->flush();
 
-           return $this->redirectToRoute('admin_site');
+                //dump($request);
+
+            // return $this->redirectToRoute('admin_site');
         }
+
+        //dump($form);
+
+        //$stack = array('form' => $form->createView(), 'name' => $site->getName(),);
+        //$form = array('formen' => $forms['en']->createView());
+        //array_push($stack, $form);
+
+        //dump($stack);
 
         return $this->render('admin_site/edit.html.twig', [
             'form' => $form->createView(),
-            // envoyer les formulaires chargées en traduction
-            'formen' => $forms['en']->createView(),
-            'formnl' => $forms['nl']->createView(),
+            'name' => $site->getId(),
         ]);
 
     }

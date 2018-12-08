@@ -5,30 +5,27 @@ namespace App\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+
 use Gedmo\Mapping\Annotation as Gedmo;
 use Gedmo\Translatable\Translatable;
+
+use Knp\DoctrineBehaviors\Model as ORMBehaviors;
+use Symfony\Component\PropertyAccess\PropertyAccess;
+use Symfony\Component\Validator\Constraints as Assert;
 
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\SiteRepository")
- * @Gedmo\TranslationEntity(class="SiteTranslation")
  */
-class Site implements Translatable
+class Site
 {
+    use Common\IdTrait;
+    use ORMBehaviors\Translatable\Translatable;
 
     /**
-     * @Gedmo\Locale
-     * Used locale to override Translation listener`s locale
-     * this is not a mapped field of entity metadata, just a simple property
+     * @Assert\Valid
      */
-    private $locale;
-
-    /**
-     * @ORM\Id()
-     * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
-     */
-    private $id;
+    protected $translations;
 
     /**
      * @Gedmo\Timestampable(on="create")
@@ -41,24 +38,6 @@ class Site implements Translatable
      * @ORM\Column(type="datetime")
      */
     private $updatedAt;
-
-    /**
-     * @Gedmo\Translatable
-     * @ORM\Column(type="string", length=255)
-     */
-    private $name;
-
-    /**
-     * @Gedmo\Translatable
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $logo;
-
-    /**
-     * @Gedmo\Translatable
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $description;
 
     /**
      * @ORM\ManyToMany(targetEntity="App\Entity\Home", inversedBy="sites")
@@ -76,16 +55,6 @@ class Site implements Translatable
         $this->language = new ArrayCollection();
     }
 
-    public function setTranslatableLocale($locale)
-    {
-        $this->locale = $locale;
-    }
-
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
-
     public function getCreatedAt(): ?\DateTimeInterface
     {
         return $this->createdAt;
@@ -94,42 +63,6 @@ class Site implements Translatable
     public function getUpdatedAt(): ?\DateTimeInterface
     {
         return $this->updatedAt;
-    }
-
-    public function getName(): ?string
-    {
-        return $this->name;
-    }
-
-    public function setName(string $name): self
-    {
-        $this->name = $name;
-
-        return $this;
-    }
-
-    public function getLogo(): ?string
-    {
-        return $this->logo;
-    }
-
-    public function setLogo(?string $logo): self
-    {
-        $this->logo = $logo;
-
-        return $this;
-    }
-
-    public function getDescription(): ?string
-    {
-        return $this->description;
-    }
-
-    public function setDescription(?string $description): self
-    {
-        $this->description = $description;
-
-        return $this;
     }
 
     /**

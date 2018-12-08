@@ -1,32 +1,18 @@
 {% extends 'admin.html.twig' %}
 
-{% block title %}Editer un site{% endblock %}
-{% block elementTitle %}Editer un site{% endblock %}
+{% block title %}Ajouter un catégorie{% endblock %}
+{% block elementTitle %}Ajouter une catégorie{% endblock %}
 
 {% block body %}
 
-    <section id="basic-form-layouts">
+    {{ dump(form.children.translations.children) }}
 
+    <section id="basic-form-layouts">
         <div class="row match-height">
             <div class="col-md-12">
                 <div class="card" style="height: auto;">
                     <div class="card-header">
-                        <h4 class="card-title" id="basic-layout-form">{{ name }}</h4>
-                        <a class="heading-elements-toggle">
-                            <i class="la la-ellipsis-v font-medium-3"></i>
-                        </a>
-
-                    </div>
-
-
-
-
-
-
-                </div>
-                <div class="card" style="height: auto;">
-                    <div class="card-header">
-                        <h4 class="card-title" id="basic-layout-form">Configuration</h4>
+                        <h4 class="card-title" id="basic-layout-form">Nouvelle gallery</h4>
                         <a class="heading-elements-toggle">
                             <i class="la la-ellipsis-v font-medium-3"></i>
                         </a>
@@ -34,17 +20,19 @@
                     </div>
                     <div class="card-content collapse show">
                         <div class="card-body">
-
+                            <div class="card-text">
+                                <p>Lorem ipsum</p>
+                            </div>
 
                             {{ form_start(form) }}
-                            {{ form_end(form) }}
 
                             <div class="form-actions">
                                 <button type="submit" class="btn btn-primary">
-                                    <i class="la la-check-square-o"></i> Mettre à jour le site
+                                    <i class="la la-check-square-o"></i> Ajouter les données
                                 </button>
                             </div>
 
+                            {{ form_end(form) }}
 
                         </div>
                     </div>
@@ -55,8 +43,10 @@
         </div>
         </div>
 
+
+
+
     </section>
 
-    {{ form_end(form) }}
-
 {% endblock %}
+

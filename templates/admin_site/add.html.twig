@@ -24,24 +24,24 @@
                             </div>
 
 
+                            {{ form_start(form) }}
 
-                                <ul class="nav nav-tabs">
-                                    <li class="nav-item">
-                                        <a class="nav-link active show" id="baseIcon-tab1" data-toggle="tab" aria-controls="tabIcon1" href="#tabIcon1" aria-expanded="true"><i class="ft-aperture"></i> Francais</a>
-                                    </li>
-                                </ul>
-                                <div class="tab-content px-1 pt-1">
-                                    <div role="tabpanel" class="tab-pane active show" id="tabIcon1" aria-expanded="true" aria-labelledby="baseIcon-tab1">
-                                        {{ form_row(form.name) }}
-                                        {{ form_row(form.logo) }}
-                                        {{ form_row(form.description) }}
-                                    </div>
-                                </div>
+                            {{ form_row(form.home) }}
+                            {{ form_row(form.language) }}
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="la la-check-square-o"></i> Ajouter un nouveau site
+                                </button>
+                            </div>
+
+                            {{ form_end(form) }}
 
 
                         </div>
                     </div>
                 </div>
+
                 <div class="card" style="height: auto;">
                     <div class="card-header">
                         <h4 class="card-title" id="basic-layout-form">Configuration</h4>
@@ -55,19 +55,6 @@
 
 
 
-                            {{ form_start(form) }}
-                            {{ form_row(form.home) }}
-                            {{ form_row(form.language) }}
-
-                            <div class="form-actions">
-                                <button type="submit" class="btn btn-primary">
-                                    <i class="la la-check-square-o"></i> Ajouter un nouveau site
-                                </button>
-                            </div>
-
-                            {{ form_end(form) }}
-
-
 
 
                         </div>
@@ -79,9 +66,8 @@
         </div>
         </div>
 
-
-
-
     </section>
+
+
 
 {% endblock %}

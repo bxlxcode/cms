@@ -2,27 +2,19 @@
 
 namespace App\Form;
 
-use A2lix\TranslationFormBundle\Form\Type\TranslatedEntityType;
 use A2lix\TranslationFormBundle\Form\Type\TranslationsType;
-use App\Entity\Home;
-use App\Entity\Language;
-use App\Entity\Site;
-use App\Entity\SiteTranslationBis;
-use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class SiteType extends AbstractType
+class CategoryType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
-
     {
         $builder
-
             ->add('translations', TranslationsType::class, [
                 'fields' => [                                           // [2]
-                    'name' => [                                        // [3.a]
+                    'title' => [                                        // [3.a]
                         // 'field_type' => 'textarea',                  // [4]
                         'label' => 'title',                             // [4]
                         'locale_options' => [                           // [3.b]
@@ -33,32 +25,20 @@ class SiteType extends AbstractType
                             //'nl' => ['display' => false],
                             //'es' => ['display' => false],
                             //'en' => ['display' => false],
-                        ]
-                    ]
-                ],
-                // 'excluded_fields' => ['details']            // [2]
-            ])
-
-            ->add('home', EntityType::class,[
-                'class' => Home::class,
-                'choice_label' => 'name',
-                'multiple' => true,
-                'expanded' => true,
-            ])
-
-            ->add('language', EntityType::class,[
-                'class' => Language::class,
-                'choice_label' => 'name',
-                'multiple' => true,
-                'expanded' => true,
-            ])
-        ;
+            ]
+        ]
+    ],
+    // 'excluded_fields' => ['details']            // [2]
+]);
     }
+
+
+
 
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => Site::class,
+            // Configure your form options here
         ]);
     }
 }

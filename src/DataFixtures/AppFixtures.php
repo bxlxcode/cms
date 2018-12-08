@@ -2,6 +2,8 @@
 
 namespace App\DataFixtures;
 
+use App\Entity\Category;
+use App\Entity\CategoryTranslation;
 use App\Entity\Image;
 use App\Entity\Language;
 use App\Entity\Gallery;
@@ -16,55 +18,92 @@ class AppFixtures extends Fixture
     public function load(ObjectManager $manager)
     {
 
-                $faker = Faker\Factory::create('fr_FR');
+        $category = new Category;
 
-                for ($i = 0; $i < 1; $i++) {
+        $category->translate('fr')->setTitle('Chaussures');
+        $category->translate('en')->setTitle('Shoes');
 
-                    $site = new Site();
-                    $site->setName($faker->colorName);
-                    $site->setLogo('logo');
-                    $site->setDescription('descr');
+        $manager->persist($category);
 
-                    //$site->setTranslatableLocale('en');
+        // In order to persist new translations, call mergeNewTranslations method, before flush
+        $category->mergeNewTranslations();
 
-                    $manager->persist($site);
-                    $manager->flush();
-                }
-
+        $category->translate('en')->getTitle();
+        $manager->flush();
 
         /*
 
-                        $faker = Faker\Factory::create('fr_FR');
+        $category = new Category;
+        $category->translate('fr')->setName('Chaussures');
+        $category->translate('en')->setName('Shoes');
+        $manager->persist($category);
 
-                        for ($i = 0; $i < 5; $i++) {
+        // In order to persist new translations, call mergeNewTranslations method, before flush
+        $category->mergeNewTranslations();
+        $category->translate('en')->getName();
 
-                            $language = new Language();
-                            $language->setName($faker->country)
-                                ->setIsPublish($faker->boolean)
-                                ->setIcon($faker->countryCode)
-                                ->setIso($faker->countryCode);
+        $manager->flush();
 
-                            $manager->persist($language);
-
-                            for ($a = 0; $a < 2; $a++) {
-                                $tag = new Gallery();
-                                $tag->setName($faker->colorName)
-                                    ->setIsPublish($faker->boolean);
+        */
 
 
-                                $image = new Image();
-                                $image->setName($faker->company)
-                                    ->setCopyright($faker->colorName)
-                                    ->setUrl($faker->imageUrl())
-                                    ->setIsPublish($faker->boolean)
-                                    ->addTag($tag);
 
-                                $manager->persist($tag);
-                                $manager->persist($image);
-                            }
-                        }
+/*
+        // assumes default locale is "en"
+        $food = new Category;
+        $food->setTitle('Food');
+        $food->addTranslation(new CategoryTranslation('lt', 'title', 'Maistas'));
 
-                        $manager->flush();
-                        */
+        $fruits = new Category;
+        // $fruits->setParent($food);
+        $fruits->setTitle('Fruits');
+        $fruits->addTranslation(new CategoryTranslation('lt', 'title', 'Vaisiai'));
+        $fruits->addTranslation(new CategoryTranslation('ru', 'title', 'rus trans'));
+
+        $manager->persist($food);
+        $manager->persist($fruits);
+        $manager->flush();
+*/
+
+        /*
+        $faker = Faker\Factory::create('fr_FR');
+
+        // persisting multiple translations, assume default locale is EN
+        $repository = $manager->getRepository('Gedmo\\Translatable\\Entity\\Translation');
+        // it works for ODM also
+
+        $site = new Site();
+
+        $site->setName('mon site original')
+            ->setDescription('description')
+            ->setLogo('logo');
+
+        $repository->translate($site, 'name', 'en', 'my site in en')
+                   ->translate($site, 'description', 'en', 'description in en')
+                   ->translate($site, 'logo', 'en', 'logo in en')
+
+                   ->translate($site, 'name', 'fr', 'my site in fr')
+                   ->translate($site, 'description', 'fr', 'description in fr')
+                   ->translate($site, 'logo', 'fr', 'logo in fr')
+        ;
+
+        $manager->persist($site);
+        $manager->flush();
+
+        */
+
+        // updating same article also having one new translation
+
+        /*
+        $repo
+            ->translate($article, 'title', 'lt', 'title lt')
+            ->translate($article, 'content', 'lt', 'content lt')
+            ->translate($article, 'title', 'ru', 'title ru change')
+            ->translate($article, 'content', 'ru', 'content ru change')
+            ->translate($article, 'title', 'en', 'title en (default locale) update')
+            ->translate($article, 'content', 'en', 'content en (default locale) update')
+        ;
+        $manager->flush();
+        */
     }
 }
