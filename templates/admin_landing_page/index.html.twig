@@ -1,8 +1,8 @@
 {% extends 'admin.html.twig' %}
 
-{% block title %}Landings{% endblock %}
+{% block title %}Landing pages{% endblock %}
 
-{% block elementTitle %}Landings{% endblock %}
+{% block elementTitle %}Landing pages{% endblock %}
 
 {% block body %}
 
@@ -11,7 +11,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title">Liste des landings</h4>
+                    <h4 class="card-title">Liste des landing pages</h4>
                     <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
 
                 </div>
@@ -22,20 +22,27 @@
                             <table class="table">
                                 <thead>
                                 <tr>
-
                                     <th>id</th>
                                     <th>name</th>
-                                    <th>description</th>
+                                    <th>nombre</th>
+                                    <th>action</th>
                                 </tr>
 
                                 </thead>
                                 <tbody>
 
+
                                 {% for result in results %}
+
+
+
                                     <tr>
                                         <th scope="row">{{ result.id }}</th>
-                                        <td>{{ result.name }}</td>
-                                        <td>{{ result.description }}</td>
+
+
+                                        <td>name</td>
+                                        <td>nombre</td>
+                                        <td><span> <a href="{{ path('admin_landingpage_edit',{'id':result.id}) }}">Editer</a></span></td>
                                     </tr>
 
                                 {% endfor %}
@@ -46,12 +53,12 @@
                             </table>
                         </div>
                     </div>
+                    </div>
                 </div>
+
+            <a href="{{ path('admin_landingpage_add') }}"><button type="button" class="btn btn-outline-primary btn-min-width mr-1 mb-1">Ajouter une landing page</button></a>
+
             </div>
-
-            <a href="{{ path('admin_landing_add') }}"><button type="button" class="btn btn-outline-primary btn-min-width mr-1 mb-1">Ajouter une nouvelle landing</button></a>
-
         </div>
-    </div>
     </div>
 {% endblock %}

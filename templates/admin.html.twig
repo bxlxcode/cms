@@ -99,7 +99,31 @@
                 </ul>
             </li>
 
-            <li class=" nav-item"><a href="#"><i class="la la-language"></i><span class="menu-title" data-i18n="">Administration</span></a>
+
+            <li class=" nav-item"><a href="#"><i class="la la-code-fork"></i><span class="menu-title" data-i18n="">Websites</span></a>
+                <ul class="menu-content">
+
+
+                    <li><a class="menu-item" href="{{ path('admin_site') }}" data-i18n="nav.starter_kit.fixed_navbar">Sites</a>
+                    </li>
+
+                </ul>
+            </li>
+
+
+            <li class=" nav-item"><a href="#"><i class="la la-windows"></i><span class="menu-title" data-i18n="">Landing pages</span></a>
+                <ul class="menu-content">
+
+                    <li><a class="menu-item" href="{{ path('admin_landingpage') }}" data-i18n="nav.starter_kit.fixed_navbar">Landing pages</a>
+                    </li>
+
+                    <li><a class="menu-item" href="{{ path('admin_headerlandingpage') }}" data-i18n="nav.starter_kit.fixed_navbar">Headers</a>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li class=" nav-item"><a href="#"><i class="la la-cog"></i><span class="menu-title" data-i18n="">Configuration</span></a>
                 <ul class="menu-content">
 
                     <li><a class="menu-item" href="{{ path('admin_language') }}" data-i18n="nav.starter_kit.fixed_navbar">Langues</a>
@@ -111,11 +135,13 @@
                     <li><a class="menu-item" href="{{ path('admin_landing') }}" data-i18n="nav.starter_kit.fixed_navbar">Landing zones</a>
                     </li>
 
-                    <li><a class="menu-item" href="{{ path('admin_site') }}" data-i18n="nav.starter_kit.fixed_navbar">Sites</a>
                     </li>
 
                 </ul>
             </li>
+
+
+
         </ul>
     </div>
     <div class="navigation-background">   </div>

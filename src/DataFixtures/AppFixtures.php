@@ -6,6 +6,7 @@ use App\Entity\Category;
 use App\Entity\CategoryTranslation;
 use App\Entity\Home;
 use App\Entity\Image;
+use App\Entity\Landing;
 use App\Entity\Language;
 use App\Entity\Gallery;
 use App\Entity\Site;
@@ -45,12 +46,28 @@ class AppFixtures extends Fixture
         ];
 
 
+        $landingzones = [
+            'Header'     => 'Affiche le header principal',
+            'Intrdocution'  => 'Affiche l introdcution du site',
+            'Offres'            => 'Plusieurs offres dans ce block',
+        ];
+
+
         foreach ($homezones as $key => $value) {
             $home = new Home();
             $home->setName($key)
                 ->setDescription($value);
 
             $manager->persist($home);
+            $manager->flush();
+        }
+
+        foreach ($landingzones as $key => $value) {
+            $landings = new Landing();
+            $landings->setName($key)
+                ->setDescription($value);
+
+            $manager->persist($landings);
             $manager->flush();
         }
 

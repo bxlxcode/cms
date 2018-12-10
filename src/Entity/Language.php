@@ -56,9 +56,15 @@ class Language
      */
     private $sites;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\LandignPage", mappedBy="language")
+     */
+    private $landignPages;
+
     public function __construct()
     {
         $this->sites = new ArrayCollection();
+        $this->landignPages = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -147,6 +153,34 @@ class Language
         if ($this->sites->contains($site)) {
             $this->sites->removeElement($site);
             $site->removeLanguage($this);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|LandignPage[]
+     */
+    public function getLandignPages(): Collection
+    {
+        return $this->landignPages;
+    }
+
+    public function addLandignPage(LandignPage $landignPage): self
+    {
+        if (!$this->landignPages->contains($landignPage)) {
+            $this->landignPages[] = $landignPage;
+            $landignPage->addLanguage($this);
+        }
+
+        return $this;
+    }
+
+    public function removeLandignPage(LandignPage $landignPage): self
+    {
+        if ($this->landignPages->contains($landignPage)) {
+            $this->landignPages->removeElement($landignPage);
+            $landignPage->removeLanguage($this);
         }
 
         return $this;

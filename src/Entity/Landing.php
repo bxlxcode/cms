@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 
@@ -39,6 +41,16 @@ class Landing
      */
     private $description;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\LandignPage", mappedBy="landingZone")
+     */
+    private $landignPages;
+
+    public function __construct()
+    {
+        $this->landignPages = new ArrayCollection();
+    }
+
     public function getId(): ?int
     {
         return $this->id;
@@ -75,6 +87,34 @@ class Landing
     public function setDescription(string $description): self
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|LandignPage[]
+     */
+    public function getLandignPages(): Collection
+    {
+        return $this->landignPages;
+    }
+
+    public function addLandignPage(LandignPage $landignPage): self
+    {
+        if (!$this->landignPages->contains($landignPage)) {
+            $this->landignPages[] = $landignPage;
+            $landignPage->addLandingZone($this);
+        }
+
+        return $this;
+    }
+
+    public function removeLandignPage(LandignPage $landignPage): self
+    {
+        if ($this->landignPages->contains($landignPage)) {
+            $this->landignPages->removeElement($landignPage);
+            $landignPage->removeLandingZone($this);
+        }
 
         return $this;
     }
