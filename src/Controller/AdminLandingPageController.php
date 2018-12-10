@@ -60,8 +60,6 @@ class AdminLandingPageController extends AbstractController
         $form = $this->createForm(LandingPageType::class, $landignPage);
         $form->handleRequest($request);
 
-        dump($landignPage->getTranslations());
-
         if ($form->isSubmitted() && $form->isValid()) {
             $objectManager->persist($landignPage);
             $objectManager->flush();
@@ -75,18 +73,4 @@ class AdminLandingPageController extends AbstractController
         ]);
 
     }
-
-    /**
-     * @Route("/admin/landingpage/{id}/show", name="admin_landingpage_show")
-     */
-
-    public function show(LandignPage $landignPage, ObjectManager $objectManager) {
-        $landing = $objectManager->find(Site::class, $landignPage->getId());
-        $repository = $objectManager->getRepository('Gedmo\Translatable\Entity\Translation');
-        $translations = $repository->findTranslations($landing);
-        dump($translations);
-
-        return $this->render('admin_landing_page/show.html.twig');
-    }
-
 }

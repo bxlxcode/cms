@@ -35,42 +35,6 @@ class AppFixtures extends Fixture
             'ru' => 'Russe'
         ];
 
-
-        $homezones = [
-            'Menu Principal'     => 'Affiche le menu principal lié au site',
-            'Menu Professionel'  => 'Affiche le menu profesionnel pour naviguer sur les autres sites',
-            'Header'            => '',
-            'Discovery'         => '',
-            'Thèmes'            => '',
-            'Recherche'         => ''
-        ];
-
-
-        $landingzones = [
-            'Header'     => 'Affiche le header principal',
-            'Intrdocution'  => 'Affiche l introdcution du site',
-            'Offres'            => 'Plusieurs offres dans ce block',
-        ];
-
-
-        foreach ($homezones as $key => $value) {
-            $home = new Home();
-            $home->setName($key)
-                ->setDescription($value);
-
-            $manager->persist($home);
-            $manager->flush();
-        }
-
-        foreach ($landingzones as $key => $value) {
-            $landings = new Landing();
-            $landings->setName($key)
-                ->setDescription($value);
-
-            $manager->persist($landings);
-            $manager->flush();
-        }
-
         foreach ($languageNames as $key => $value) {
             $language = new Language();
             $language->setName($value)
@@ -81,6 +45,45 @@ class AppFixtures extends Fixture
             $manager->persist($language);
             $manager->flush();
         }
+
+        $homezones = [
+            'Menu Principal'     => 'Affiche le menu principal lié au site',
+            'Menu Professionel'  => 'Affiche le menu profesionnel pour naviguer sur les autres sites',
+            'Header'            => '',
+            'Discovery'         => '',
+            'Thèmes'            => '',
+            'Recherche'         => ''
+        ];
+
+        foreach ($homezones as $key => $value) {
+            $home = new Home();
+            $home->setName($key)
+                ->setDescription($value);
+
+            $manager->persist($home);
+            $manager->flush();
+        }
+
+        $landingzones = [
+            'Header'     => 'Affiche le header principal',
+            'Intrdocution'  => 'Affiche l introdcution du site',
+            'Offres'            => 'Plusieurs offres dans ce block',
+        ];
+
+
+        foreach ($landingzones as $key => $value) {
+            $landings = new Landing();
+            $landings->setName($key)
+                ->setDescription($value);
+
+            $manager->persist($landings);
+            $manager->flush();
+        }
+
+        // galeries
+        // sliders
+        // site
+        // landingpage
 
         /*
         $category = new Category;

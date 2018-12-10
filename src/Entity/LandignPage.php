@@ -54,10 +54,21 @@ class LandignPage
      */
     private $headerLandingPage;
 
+    /**
+     * @ORM\OneToOne(targetEntity="App\Entity\IntrdocutionLandingPage", mappedBy="landingPage", cascade={"persist", "remove"})
+     */
+    private $intrdocutionLandingPage;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\OffreLandingPage", mappedBy="landingPage")
+     */
+    private $offreLandingPages;
+
     public function __construct()
     {
         $this->landingZone = new ArrayCollection();
         $this->language = new ArrayCollection();
+        $this->offreLandingPages = new ArrayCollection();
     }
 
     public function getCreatedAt(): ?\DateTimeInterface
@@ -148,6 +159,54 @@ class LandignPage
         // set the owning side of the relation if necessary
         if ($this !== $headerLandingPage->getLandingPage()) {
             $headerLandingPage->setLandingPage($this);
+        }
+
+        return $this;
+    }
+
+    public function getIntrdocutionLandingPage(): ?IntrdocutionLandingPage
+    {
+        return $this->intrdocutionLandingPage;
+    }
+
+    public function setIntrdocutionLandingPage(IntrdocutionLandingPage $intrdocutionLandingPage): self
+    {
+        $this->intrdocutionLandingPage = $intrdocutionLandingPage;
+
+        // set the owning side of the relation if necessary
+        if ($this !== $intrdocutionLandingPage->getLandingPage()) {
+            $intrdocutionLandingPage->setLandingPage($this);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|OffreLandingPage[]
+     */
+    public function getOffreLandingPages(): Collection
+    {
+        return $this->offreLandingPages;
+    }
+
+    public function addOffreLandingPage(OffreLandingPage $offreLandingPage): self
+    {
+        if (!$this->offreLandingPages->contains($offreLandingPage)) {
+            $this->offreLandingPages[] = $offreLandingPage;
+            $offreLandingPage->setLandingPage($this);
+        }
+
+        return $this;
+    }
+
+    public function removeOffreLandingPage(OffreLandingPage $offreLandingPage): self
+    {
+        if ($this->offreLandingPages->contains($offreLandingPage)) {
+            $this->offreLandingPages->removeElement($offreLandingPage);
+            // set the owning side to null (unless already changed)
+            if ($offreLandingPage->getLandingPage() === $this) {
+                $offreLandingPage->setLandingPage(null);
+            }
         }
 
         return $this;
