@@ -73,7 +73,7 @@ class AdminSiteController extends AbstractController {
 
         return $this->render('admin_site/edit.html.twig', [
             'form' => $form->createView(),
-            'name' => $site->getId(),
+            'name' => $site->getTranslations()->get('fr')->getName(),
         ]);
 
     }

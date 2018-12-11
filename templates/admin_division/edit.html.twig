@@ -1,12 +1,12 @@
 {% extends 'admin.html.twig' %}
 
-{% block title %}Editer un site{% endblock %}
-{% block elementTitle %}Editer un site{% endblock %}
+{% block title %}Editer un département{% endblock %}
+{% block elementTitle %}Editer un département{% endblock %}
 
 {% block body %}
 
-    <section id="basic-form-layouts">
 
+    <section id="basic-form-layouts">
         <div class="row match-height">
             <div class="col-md-12">
                 <div class="card" style="height: auto;">
@@ -16,44 +16,38 @@
                             <i class="la la-ellipsis-v font-medium-3"></i>
                         </a>
 
-                    </div>
 
-
-
-
-
-
-                </div>
-                <div class="card" style="height: auto;">
-                    <div class="card-header">
-                        <h4 class="card-title" id="basic-layout-form">Configuration</h4>
-                        <a class="heading-elements-toggle">
-                            <i class="la la-ellipsis-v font-medium-3"></i>
-                        </a>
 
                     </div>
                     <div class="card-content collapse show">
                         <div class="card-body">
+                            <div class="card-text">
+                                <p>Lorem ipsum</p>
+                            </div>
 
 
                             {{ form_start(form) }}
-                            {{ form_row(form.translations) }}
-                            {{ form_row(form.home) }}
-                            {{ form_row(form.language) }}
+                            {{ form_row(form.name) }}
                             {{ form_row(form.isPublish) }}
+                            {{ form_row(form.director) }}
+
+
 
                             <div class="form-actions">
                                 <button type="submit" class="btn btn-primary">
-                                    <i class="la la-check-square-o"></i> Mettre à jour
+                                    <i class="la la-check-square-o"></i> Editer le département
                                 </button>
                             </div>
 
                             {{ form_end(form) }}
 
 
+
                         </div>
                     </div>
                 </div>
+
+
             </div>
 
         </div>
@@ -61,6 +55,7 @@
         </div>
 
     </section>
+
 
 
 {% endblock %}

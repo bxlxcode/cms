@@ -11,7 +11,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
-class HeaderLandingPageController extends AbstractController
+class AdminHeaderLandingPageController extends AbstractController
 {
 
     /**
@@ -69,7 +69,7 @@ class HeaderLandingPageController extends AbstractController
 
         return $this->render('admin_header_landing_page/edit.html.twig', [
             'form' => $form->createView(),
-            'name' => $headerLandingPage->getId(),
+            'name' => $headerLandingPage->getTranslations()->get('fr')->getTitle(),
         ]);
 
     }

@@ -35,12 +35,11 @@
                                 {% for result in results %}
 
 
-
                                     <tr>
                                         <th scope="row">{{ result.id }}</th>
 
 
-                                        <td>name</td>
+                                        <td>{{ result.translations.fr.name }}</td>
                                         <td>nombre</td>
                                         <td><span> <a href="{{ path('admin_landingpage_edit',{'id':result.id}) }}">Editer</a></span></td>
                                     </tr>

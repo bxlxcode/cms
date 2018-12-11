@@ -1,8 +1,8 @@
 {% extends 'admin.html.twig' %}
 
-{% block title %}Headers landing page{% endblock %}
+{% block title %}Liste des départements{% endblock %}
 
-{% block elementTitle %}Headers landing page{% endblock %}
+{% block elementTitle %}Liste des départements{% endblock %}
 
 {% block body %}
 
@@ -11,7 +11,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title">Liste des headers landing page</h4>
+                    <h4 class="card-title">Liste des membres du personnel</h4>
                     <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
 
                 </div>
@@ -24,30 +24,25 @@
                                 <tr>
                                     <th>id</th>
                                     <th>name</th>
-                                    <th>nombre</th>
+                                    <th>directeur</th>
                                     <th>action</th>
                                 </tr>
 
                                 </thead>
                                 <tbody>
 
-
                                 {% for result in results %}
-
-
 
                                     <tr>
                                         <th scope="row">{{ result.id }}</th>
 
 
-                                        <td>{{ result.translations.fr.title }}</td>
-                                        <td>nombre</td>
-                                        <td><span> <a href="{{ path('admin_headerlandingpage_edit',{'id':result.id}) }}">Editer</a></span></td>
+                                        <td>{{ result.name }}</td>
+                                        <td>{{ result.director.fullName }}</td>
+                                        <td><span> <a href="{{ path('admin_division_edit',{'id':result.id}) }}">Editer</a></span></td>
                                     </tr>
 
                                 {% endfor %}
-
-
 
                                 </tbody>
                             </table>
@@ -56,7 +51,7 @@
                     </div>
                 </div>
 
-            <a href="{{ path('admin_headerlandingpage_add') }}"><button type="button" class="btn btn-outline-primary btn-min-width mr-1 mb-1">Ajouter un header landing page</button></a>
+            <a href="{{ path('admin_division_add') }}"><button type="button" class="btn btn-outline-primary btn-min-width mr-1 mb-1">Ajouter un département</button></a>
 
             </div>
         </div>

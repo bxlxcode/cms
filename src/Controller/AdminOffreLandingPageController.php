@@ -72,7 +72,7 @@ class AdminOffreLandingPageController extends AbstractController
 
         return $this->render('admin_offre_landing_page/edit.html.twig', [
             'form' => $form->createView(),
-            'name' => $offreLandingPage->getId(),
+            'name' => $offreLandingPage->getTranslations()->get('fr')->getTitle(),
         ]);
 
     }

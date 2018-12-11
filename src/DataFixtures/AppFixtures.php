@@ -4,6 +4,7 @@ namespace App\DataFixtures;
 
 use App\Entity\Category;
 use App\Entity\CategoryTranslation;
+use App\Entity\Division;
 use App\Entity\Home;
 use App\Entity\Image;
 use App\Entity\Landing;
@@ -11,6 +12,7 @@ use App\Entity\Language;
 use App\Entity\Gallery;
 use App\Entity\Site;
 use App\Entity\Slider;
+use App\Entity\Team;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\Persistence\ObjectManager;
 Use Faker;
@@ -19,6 +21,7 @@ class AppFixtures extends Fixture
 {
     public function load(ObjectManager $manager)
     {
+        $faker = Faker\Factory::create('fr_FR');
 
         // doctrine:fixtures:load --fixtures=src/PMI/UserBundle/DataFixtures/ORM --append
         $languageNames = [
@@ -79,6 +82,35 @@ class AppFixtures extends Fixture
             $manager->persist($landings);
             $manager->flush();
         }
+
+
+
+
+
+        // créer le personnel
+        for ($i = 0; $i < 50; $i++) {
+            $team = new Team();
+            $team->setFullName($faker->name)
+                ->setImage(6)
+                ->setJobTitle($faker->jobTitle)
+                ->setIsPublish(true);
+
+            $manager->persist($team);
+            $manager->flush();
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         // galeries
         // sliders

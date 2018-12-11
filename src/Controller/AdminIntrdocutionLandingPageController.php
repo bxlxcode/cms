@@ -68,7 +68,7 @@ class AdminIntrdocutionLandingPageController extends AbstractController
 
         return $this->render('admin_introduction_landing_page/edit.html.twig', [
             'form' => $form->createView(),
-            'name' => $intrdocutionLandingPage->getId(),
+            'name' => $intrdocutionLandingPage->getTranslations()->get('fr')->getTitle(),
         ]);
 
     }

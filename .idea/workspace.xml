@@ -3,27 +3,23 @@
   <component name="ChangeListManager">
     <list default="true" id="921f75e7-efd1-4a25-9565-8d961e03b98f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/HeaderLandingPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/HeaderLandingPage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/IntrdocutionLandingPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/IntrdocutionLandingPage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/LandignPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/LandignPage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/OffreLandingPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/OffreLandingPage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Site.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Site.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/HeaderLandingPageType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/HeaderLandingPageType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/IntrdocutionLandingPageType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/IntrdocutionLandingPageType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/LandingPageType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/LandingPageType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/OffreLandingPageType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/OffreLandingPageType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/SiteType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/SiteType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20181210150749.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin_header_landing_page/add.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin_header_landing_page/add.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AdminIntrdocutionLandingPageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminIntrdocutionLandingPageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AdminLandingPageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminLandingPageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AdminOffreLandingPageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminOffreLandingPageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AdminSiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminSiteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/HeaderLandingPageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminHeaderLandingPageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/admin_header_landing_page/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin_header_landing_page/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin_image/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin_image/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin_introduction_landing_page/add.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin_introduction_landing_page/add.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin_header_landing_page/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin_header_landing_page/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/admin_introduction_landing_page/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin_introduction_landing_page/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin_landing_page/add.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin_landing_page/add.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin_introduction_landing_page/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin_introduction_landing_page/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/admin_landing_page/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin_landing_page/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin_offre_landing_page/add.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin_offre_landing_page/add.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin_landing_page/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin_landing_page/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/admin_offre_landing_page/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin_offre_landing_page/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/landing_page/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/landing_page/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin_offre_landing_page/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin_offre_landing_page/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin_site/add.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin_site/add.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin_site/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin_site/edit.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,11 +45,20 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/admin_offre_landing_page/index.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>setTranslatableLocale</find>
       <find>form_</find>
       <find>end</find>
       <find>translatio</find>
@@ -66,7 +71,6 @@
       <find>form-group</find>
       <find>loca</find>
       <find>id</find>
-      <find>site</find>
       <find>slug</find>
       <find>TranslationsType</find>
       <find>name</find>
@@ -83,6 +87,8 @@
       <find>OffreLandingPage</find>
       <find>$landingPage</find>
       <find>landingPage</find>
+      <find>site</find>
+      <find>fake</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\m.samahi\Documents\cms</dir>
@@ -94,37 +100,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Controller/AdminSiteController.php" />
-        <option value="$PROJECT_DIR$/templates/admin_site/index.html.twig" />
-        <option value="$PROJECT_DIR$/templates/admin_site/add.html.twig" />
-        <option value="$PROJECT_DIR$/src/Entity/SiteTranslation.php" />
-        <option value="$PROJECT_DIR$/vendor/a2lix/translation-form-bundle/src/Resources/views/bootstrap_4_layout.html.twig" />
-        <option value="$PROJECT_DIR$/src/Entity/Landing.php" />
-        <option value="$PROJECT_DIR$/src/Controller/AdminLandingController.php" />
-        <option value="$PROJECT_DIR$/templates/admin_landing/add.html.twig" />
-        <option value="$PROJECT_DIR$/templates/admin_landing/delete.html.twig" />
-        <option value="$PROJECT_DIR$/templates/admin_landing/edit.html.twig" />
-        <option value="$PROJECT_DIR$/templates/admin_landing_page/delete.html.twig" />
-        <option value="$PROJECT_DIR$/templates/admin_landing/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/Entity/LandignPageTranslation.php" />
-        <option value="$PROJECT_DIR$/config/packages/a2lix.yaml" />
-        <option value="$PROJECT_DIR$/config/packages/security.yaml" />
-        <option value="$PROJECT_DIR$/src/Entity/Category.php" />
-        <option value="$PROJECT_DIR$/src/Entity/HeaderLandingPageTranslation.php" />
-        <option value="$PROJECT_DIR$/src/Controller/HeaderLandingPageController.php" />
-        <option value="$PROJECT_DIR$/templates/admin_landing_page/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/Entity/IntrdocutionLandingPageTranslation.php" />
-        <option value="$PROJECT_DIR$/templates/admin_introduction_landing_page/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/Entity/OffreLandingPageTranslation.php" />
-        <option value="$PROJECT_DIR$/templates/admin.html.twig" />
-        <option value="$PROJECT_DIR$/templates/admin_offre_landing_page/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/Controller/AdminIntrdocutionLandingPageController.php" />
-        <option value="$PROJECT_DIR$/src/Controller/AdminOffreLandingPageController.php" />
-        <option value="$PROJECT_DIR$/src/Entity/OffreLandingPage.php" />
-        <option value="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" />
-        <option value="$PROJECT_DIR$/templates/admin_landing_page/show.html.twig" />
-        <option value="$PROJECT_DIR$/templates/admin_header_landing_page/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/Controller/AdminLandingPageController.php" />
         <option value="$PROJECT_DIR$/src/Controller/LandingPageController.php" />
         <option value="$PROJECT_DIR$/templates/admin_image/index.html.twig" />
         <option value="$PROJECT_DIR$/templates/landing_page/show.html.twig" />
@@ -135,16 +110,47 @@
         <option value="$PROJECT_DIR$/src/Form/IntrdocutionLandingPageType.php" />
         <option value="$PROJECT_DIR$/src/Form/HeaderLandingPageType.php" />
         <option value="$PROJECT_DIR$/src/Form/SiteType.php" />
-        <option value="$PROJECT_DIR$/templates/admin_header_landing_page/edit.html.twig" />
         <option value="$PROJECT_DIR$/templates/admin_header_landing_page/add.html.twig" />
-        <option value="$PROJECT_DIR$/templates/admin_offre_landing_page/edit.html.twig" />
         <option value="$PROJECT_DIR$/templates/admin_offre_landing_page/add.html.twig" />
-        <option value="$PROJECT_DIR$/templates/admin_introduction_landing_page/edit.html.twig" />
         <option value="$PROJECT_DIR$/templates/admin_introduction_landing_page/add.html.twig" />
-        <option value="$PROJECT_DIR$/templates/admin_landing_page/edit.html.twig" />
         <option value="$PROJECT_DIR$/templates/admin_landing_page/add.html.twig" />
         <option value="$PROJECT_DIR$/src/Form/LandingType.php" />
         <option value="$PROJECT_DIR$/src/Form/LandingPageType.php" />
+        <option value="$PROJECT_DIR$/src/Form/TeamType.php" />
+        <option value="$PROJECT_DIR$/src/Entity/Office.php" />
+        <option value="$PROJECT_DIR$/src/Entity/Team.php" />
+        <option value="$PROJECT_DIR$/src/Entity/Division.php" />
+        <option value="$PROJECT_DIR$/templates/admin_team/add.html.twig" />
+        <option value="$PROJECT_DIR$/src/Form/DivisionType.php" />
+        <option value="$PROJECT_DIR$/templates/admin_division/add.html.twig" />
+        <option value="$PROJECT_DIR$/templates/admin.html.twig" />
+        <option value="$PROJECT_DIR$/src/Form/OfficeType.php" />
+        <option value="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" />
+        <option value="$PROJECT_DIR$/templates/admin_team/index.html.twig" />
+        <option value="$PROJECT_DIR$/templates/admin_office/index.html.twig" />
+        <option value="$PROJECT_DIR$/templates/admin_office/add.html.twig" />
+        <option value="$PROJECT_DIR$/templates/admin_team/edit.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/AdminDivisionController.php" />
+        <option value="$PROJECT_DIR$/templates/admin_division/edit.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/AdminOfficeController.php" />
+        <option value="$PROJECT_DIR$/templates/admin_office/edit.html.twig" />
+        <option value="$PROJECT_DIR$/templates/admin_landing_page/edit.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/AdminTeamController.php" />
+        <option value="$PROJECT_DIR$/templates/admin_division/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/AdminLandingPageController.php" />
+        <option value="$PROJECT_DIR$/templates/admin_header_landing_page/edit.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/AdminHeaderLandingPageController.php" />
+        <option value="$PROJECT_DIR$/src/Controller/AdminIntrdocutionLandingPageController.php" />
+        <option value="$PROJECT_DIR$/templates/admin_introduction_landing_page/edit.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/AdminOffreLandingPageController.php" />
+        <option value="$PROJECT_DIR$/templates/admin_offre_landing_page/edit.html.twig" />
+        <option value="$PROJECT_DIR$/templates/admin_site/edit.html.twig" />
+        <option value="$PROJECT_DIR$/templates/admin_site/add.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/AdminSiteController.php" />
+        <option value="$PROJECT_DIR$/templates/admin_landing_page/index.html.twig" />
+        <option value="$PROJECT_DIR$/templates/admin_header_landing_page/index.html.twig" />
+        <option value="$PROJECT_DIR$/templates/admin_introduction_landing_page/index.html.twig" />
+        <option value="$PROJECT_DIR$/templates/admin_offre_landing_page/index.html.twig" />
       </list>
     </option>
   </component>
@@ -295,13 +301,13 @@
             <path>
               <item name="cms" type="b2602c69:ProjectViewProjectNode" />
               <item name="cms" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cms" type="b2602c69:ProjectViewProjectNode" />
               <item name="cms" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Form" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="admin_offre_landing_page" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -316,15 +322,15 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\m.samahi\Documents\cms\templates\landing_page" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\m.samahi\Documents\cms\templates\admin_office" />
+      <recent name="C:\Users\m.samahi\Documents\cms\templates\admin_division" />
+      <recent name="C:\Users\m.samahi\Documents\cms\templates\admin_team" />
       <recent name="C:\Users\m.samahi\Documents\cms\templates\admin_offre_landing_page" />
       <recent name="C:\Users\m.samahi\Documents\cms\templates\admin_introduction_landing_page" />
-      <recent name="C:\Users\m.samahi\Documents\cms\templates\admin_header_landing_page" />
-      <recent name="C:\Users\m.samahi\Documents\cms\templates\admin_landing_page" />
-      <recent name="C:\Users\m.samahi\Documents\cms\templates\admin_landing" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\m.samahi\Documents\cms\templates\landing_page" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -357,12 +363,12 @@
       <workItem from="1544260714503" duration="6712000" />
       <workItem from="1544271932666" duration="23814000" />
       <workItem from="1544432855475" duration="25800000" />
-      <workItem from="1544514946377" duration="1510000" />
+      <workItem from="1544514946377" duration="9743000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133442000" />
+    <option name="totallyTimeSpent" value="141675000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -375,8 +381,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25159913" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2510661" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -397,7 +404,7 @@
       <window_info anchor="right" id="Database" order="3" weight="0.32995737" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2489339" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25159913" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -410,7 +417,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.50666666" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.5588889" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -422,330 +429,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/routes.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/services.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/packages/a2lix.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="54" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/packages/security.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/packages/liip_imagine.yaml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Gallery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="40" />
-          <folding>
-            <element signature="e#30#78#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/HeaderLandingPageTranslation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="18" column="18" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="18" />
-          <folding>
-            <element signature="e#30#62#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/LandignPageTranslation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="17" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="17" />
-          <folding>
-            <element signature="e#30#62#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Category.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="4" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="20" selection-end-column="28" />
-          <folding>
-            <element signature="e#30#62#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/CategoryTranslation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="5" selection-end-column="48" />
-          <folding>
-            <element signature="e#30#62#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin_landing_page/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="44" column="40" lean-forward="true" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="137" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin_site/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin_introduction_landing_page/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/SiteTranslation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-321">
-          <caret line="15" column="4" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="46" />
-          <folding>
-            <element signature="e#30#62#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="125" column="82" selection-start-line="125" selection-start-column="82" selection-end-line="125" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/IntrdocutionLandingPageTranslation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="40" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="40" />
-          <folding>
-            <element signature="e#30#62#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin_offre_landing_page/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="44" column="80" selection-start-line="44" selection-start-column="80" selection-end-line="44" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/OffreLandingPageTranslation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="16" column="60" lean-forward="true" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
-          <folding>
-            <element signature="e#30#62#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Language.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/AdminIntrdocutionLandingPageController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="38" column="65" selection-start-line="38" selection-start-column="65" selection-end-line="38" selection-end-column="65" />
-          <folding>
-            <element signature="e#34#73#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/AdminOffreLandingPageController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="34" column="38" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="38" />
-          <folding>
-            <element signature="e#34#66#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/OffreLandingPage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
-          <folding>
-            <element signature="e#30#78#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataFixtures/AppFixtures.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin_header_landing_page/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="671">
-          <caret line="58" column="42" selection-start-line="58" selection-start-column="42" selection-end-line="58" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/AdminSiteController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="31" column="9" selection-start-line="27" selection-start-column="7" selection-end-line="31" selection-end-column="9" />
-          <folding>
-            <element signature="e#34#54#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/HeaderLandingPageController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-          <folding>
-            <element signature="e#34#67#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/AdminLandingPageController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="60" column="39" selection-start-line="60" selection-start-column="39" selection-end-line="60" selection-end-column="39" />
-          <folding>
-            <element signature="e#34#61#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin_image/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="4" lean-forward="true" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin_gallery/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/landing_page/show.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/LandingPageController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="40" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/IntrdocutionLandingPage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="716">
-          <caret line="97" column="5" selection-start-line="97" selection-start-column="5" selection-end-line="97" selection-end-column="5" />
-          <folding>
-            <element signature="e#30#78#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/HeaderLandingPage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="685">
-          <caret line="102" column="5" selection-start-line="102" selection-start-column="5" selection-end-line="102" selection-end-column="5" />
-          <folding>
-            <element signature="e#30#62#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Site.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="109" lean-forward="true" selection-start-line="93" selection-start-column="4" selection-end-line="109" />
-          <folding>
-            <element signature="e#30#78#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/IntrdocutionLandingPageType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
-          <folding>
-            <element signature="e#28#91#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/OffreLandingPageType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="e#28#91#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/SiteType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="e#28#91#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin_header_landing_page/add.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="46" column="47" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin_header_landing_page/edit.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="51" column="28" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/admin_introduction_landing_page/add.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="359">
@@ -753,31 +436,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin_introduction_landing_page/edit.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="48" column="58" selection-start-line="48" selection-start-column="58" selection-end-line="48" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/admin_offre_landing_page/add.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="671">
           <caret line="52" column="58" selection-start-line="52" selection-start-column="58" selection-end-line="52" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin_offre_landing_page/edit.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="49" column="58" selection-start-line="49" selection-start-column="58" selection-end-line="49" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin_landing_page/edit.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="42" column="58" selection-start-line="42" selection-start-column="58" selection-end-line="42" selection-end-column="58" />
         </state>
       </provider>
     </entry>
@@ -829,6 +491,336 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="51" column="58" selection-start-line="51" selection-start-column="58" selection-end-line="51" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/HeaderLandingPage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="40" />
+          <folding>
+            <element signature="e#30#62#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/CategoryType.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Team.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+          <folding>
+            <element signature="e#30#62#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Office.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
+          <folding>
+            <element signature="e#30#78#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin_team/add.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="45" selection-end-line="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin_language/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin_landing/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Division.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="24" column="7" lean-forward="true" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+          <folding>
+            <element signature="e#30#78#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/TeamType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="16" column="29" lean-forward="true" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/SiteType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="58" column="14" lean-forward="true" selection-start-line="52" selection-start-column="12" selection-end-line="58" selection-end-column="14" />
+          <folding>
+            <element signature="e#28#91#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/DivisionType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="23" column="43" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin_division/add.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="141" column="72" selection-start-line="141" selection-start-column="72" selection-end-line="141" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/OfficeType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="20" column="27" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="27" />
+          <folding>
+            <element signature="e#28#52#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataFixtures/AppFixtures.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="100" column="8" selection-start-line="100" selection-start-column="8" selection-end-line="100" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin_office/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="40" lean-forward="true" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin_team/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="40" column="62" selection-start-line="40" selection-start-column="62" selection-end-line="40" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin_office/add.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="38" column="98" selection-start-line="38" selection-start-column="92" selection-end-line="38" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin_team/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="21" column="50" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin_division/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="77" selection-start-line="13" selection-start-column="77" selection-end-line="13" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin_office/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/AdminOfficeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="688">
+          <caret line="76" column="40" selection-start-line="76" selection-start-column="40" selection-end-line="76" selection-end-column="40" />
+          <folding>
+            <element signature="e#34#56#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/AdminDivisionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="62" column="42" selection-start-line="62" selection-start-column="42" selection-end-line="62" selection-end-column="42" />
+          <folding>
+            <element signature="e#34#58#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin_header_landing_page/add.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="70" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin_landing_page/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="47" lean-forward="true" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin_division/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/AdminLanguageController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="49" column="51" selection-start-line="49" selection-start-column="51" selection-end-line="49" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/AdminTeamController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="620">
+          <caret line="58" column="36" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="36" />
+          <folding>
+            <element signature="e#34#54#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/AdminHeaderLandingPageController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="71" column="81" selection-start-line="71" selection-start-column="81" selection-end-line="71" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin_introduction_landing_page/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="80" selection-start-line="13" selection-start-column="80" selection-end-line="13" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin_offre_landing_page/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="77" selection-start-line="13" selection-start-column="77" selection-end-line="13" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/AdminOffreLandingPageController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="74" column="79" selection-start-line="74" selection-start-column="71" selection-end-line="74" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/AdminIntrdocutionLandingPageController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="70" column="46" selection-start-line="70" selection-start-column="46" selection-end-line="70" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin_header_landing_page/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="70" selection-start-line="13" selection-start-column="70" selection-end-line="13" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin_site/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="42" column="54" selection-start-line="42" selection-start-column="54" selection-end-line="42" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin_site/add.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="56" lean-forward="true" selection-start-line="37" selection-start-column="56" selection-end-line="37" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/AdminSiteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="66" column="39" lean-forward="true" selection-start-line="66" selection-start-column="39" selection-end-line="66" selection-end-column="39" />
+          <folding>
+            <element signature="e#34#54#0#PHP" expanded="true" />
+            <element signature="e#668#1060#0#PHP" />
+            <element signature="e#1066#1133#0#PHP" />
+            <element signature="e#1138#1709#0#PHP" />
+            <element signature="e#1715#1789#0#PHP" />
+            <element signature="e#2332#2406#0#PHP" />
+            <element signature="e#2412#2800#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin_site/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="44" column="50" selection-start-line="44" selection-start-column="44" selection-end-line="44" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin_landing_page/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="41" column="77" selection-start-line="41" selection-start-column="77" selection-end-line="41" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/AdminLandingPageController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="665">
+          <caret line="71" column="76" selection-start-line="71" selection-start-column="12" selection-end-line="71" selection-end-column="76" />
+          <folding>
+            <element signature="e#34#61#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin_header_landing_page/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="42" column="75" selection-start-line="42" selection-start-column="75" selection-end-line="42" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin_introduction_landing_page/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="42" column="75" selection-start-line="42" selection-start-column="75" selection-end-line="42" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin_offre_landing_page/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
         </state>
       </provider>
     </entry>
