@@ -18,6 +18,8 @@ class HeaderLandingPageType extends AbstractType
     {
         $builder
             ->add('image')
+            ->add('isPublish')
+
 
             /*
             ->add('landingPage', EntityType::class,

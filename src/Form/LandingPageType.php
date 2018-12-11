@@ -17,6 +17,7 @@ class LandingPageType extends AbstractType
     {
         $builder
 
+            ->add('isPublish')
             ->add('translations', TranslationsType::class, [
                 'label' => '...............',
                 'fields' => [                                           // [2]

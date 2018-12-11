@@ -49,6 +49,11 @@ class OffreLandingPage
      */
     private $landingPage;
 
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $isPublish;
+
     public function getCreatedAt(): ?\DateTimeInterface
     {
         return $this->createdAt;
@@ -79,6 +84,18 @@ class OffreLandingPage
     public function setLandingPage(?LandignPage $landingPage): self
     {
         $this->landingPage = $landingPage;
+
+        return $this;
+    }
+
+    public function getIsPublish(): ?bool
+    {
+        return $this->isPublish;
+    }
+
+    public function setIsPublish(bool $isPublish): self
+    {
+        $this->isPublish = $isPublish;
 
         return $this;
     }

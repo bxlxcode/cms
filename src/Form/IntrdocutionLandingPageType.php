@@ -17,6 +17,8 @@ class IntrdocutionLandingPageType extends AbstractType
     {
         $builder
 
+            ->add('isPublish')
+
             ->add('landingPage', TranslatedEntityType::class,
                 array(
                     'class' => LandignPage::class,

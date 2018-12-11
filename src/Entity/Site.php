@@ -49,6 +49,11 @@ class Site
      */
     private $language;
 
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $isPublish;
+
     public function __construct()
     {
         $this->home = new ArrayCollection();
@@ -113,6 +118,18 @@ class Site
         if ($this->language->contains($language)) {
             $this->language->removeElement($language);
         }
+
+        return $this;
+    }
+
+    public function getIsPublish(): ?bool
+    {
+        return $this->isPublish;
+    }
+
+    public function setIsPublish(bool $isPublish): self
+    {
+        $this->isPublish = $isPublish;
 
         return $this;
     }

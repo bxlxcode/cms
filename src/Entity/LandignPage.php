@@ -49,26 +49,34 @@ class LandignPage
      */
     private $language;
 
-    /**
-     * @ORM\OneToOne(targetEntity="App\Entity\HeaderLandingPage", mappedBy="landingPage", cascade={"persist", "remove"})
-     */
-    private $headerLandingPage;
-
-    /**
-     * @ORM\OneToOne(targetEntity="App\Entity\IntrdocutionLandingPage", mappedBy="landingPage", cascade={"persist", "remove"})
-     */
-    private $intrdocutionLandingPage;
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\OffreLandingPage", mappedBy="landingPage")
      */
     private $offreLandingPages;
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\HeaderLandingPage", mappedBy="landingPage")
+     */
+    private $headerLandingPages;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\IntrdocutionLandingPage", mappedBy="landingPage")
+     */
+    private $intrdocutionLandingPages;
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $isPublish;
+
     public function __construct()
     {
         $this->landingZone = new ArrayCollection();
         $this->language = new ArrayCollection();
         $this->offreLandingPages = new ArrayCollection();
+        $this->headerLandingPages = new ArrayCollection();
+        $this->intrdocutionLandingPages = new ArrayCollection();
     }
 
     public function getCreatedAt(): ?\DateTimeInterface
@@ -147,39 +155,6 @@ class LandignPage
         return $this;
     }
 
-    public function getHeaderLandingPage(): ?HeaderLandingPage
-    {
-        return $this->headerLandingPage;
-    }
-
-    public function setHeaderLandingPage(HeaderLandingPage $headerLandingPage): self
-    {
-        $this->headerLandingPage = $headerLandingPage;
-
-        // set the owning side of the relation if necessary
-        if ($this !== $headerLandingPage->getLandingPage()) {
-            $headerLandingPage->setLandingPage($this);
-        }
-
-        return $this;
-    }
-
-    public function getIntrdocutionLandingPage(): ?IntrdocutionLandingPage
-    {
-        return $this->intrdocutionLandingPage;
-    }
-
-    public function setIntrdocutionLandingPage(IntrdocutionLandingPage $intrdocutionLandingPage): self
-    {
-        $this->intrdocutionLandingPage = $intrdocutionLandingPage;
-
-        // set the owning side of the relation if necessary
-        if ($this !== $intrdocutionLandingPage->getLandingPage()) {
-            $intrdocutionLandingPage->setLandingPage($this);
-        }
-
-        return $this;
-    }
 
     /**
      * @return Collection|OffreLandingPage[]
@@ -208,6 +183,80 @@ class LandignPage
                 $offreLandingPage->setLandingPage(null);
             }
         }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|HeaderLandingPage[]
+     */
+    public function getHeaderLandingPages(): Collection
+    {
+        return $this->headerLandingPages;
+    }
+
+    public function addHeaderLandingPage(HeaderLandingPage $headerLandingPage): self
+    {
+        if (!$this->headerLandingPages->contains($headerLandingPage)) {
+            $this->headerLandingPages[] = $headerLandingPage;
+            $headerLandingPage->setLandingPage($this);
+        }
+
+        return $this;
+    }
+
+    public function removeHeaderLandingPage(HeaderLandingPage $headerLandingPage): self
+    {
+        if ($this->headerLandingPages->contains($headerLandingPage)) {
+            $this->headerLandingPages->removeElement($headerLandingPage);
+            // set the owning side to null (unless already changed)
+            if ($headerLandingPage->getLandingPage() === $this) {
+                $headerLandingPage->setLandingPage(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|IntrdocutionLandingPage[]
+     */
+    public function getIntrdocutionLandingPages(): Collection
+    {
+        return $this->intrdocutionLandingPages;
+    }
+
+    public function addIntrdocutionLandingPage(IntrdocutionLandingPage $intrdocutionLandingPage): self
+    {
+        if (!$this->intrdocutionLandingPages->contains($intrdocutionLandingPage)) {
+            $this->intrdocutionLandingPages[] = $intrdocutionLandingPage;
+            $intrdocutionLandingPage->setLandingPage($this);
+        }
+
+        return $this;
+    }
+
+    public function removeIntrdocutionLandingPage(IntrdocutionLandingPage $intrdocutionLandingPage): self
+    {
+        if ($this->intrdocutionLandingPages->contains($intrdocutionLandingPage)) {
+            $this->intrdocutionLandingPages->removeElement($intrdocutionLandingPage);
+            // set the owning side to null (unless already changed)
+            if ($intrdocutionLandingPage->getLandingPage() === $this) {
+                $intrdocutionLandingPage->setLandingPage(null);
+            }
+        }
+
+        return $this;
+    }
+
+    public function getIsPublish(): ?bool
+    {
+        return $this->isPublish;
+    }
+
+    public function setIsPublish(bool $isPublish): self
+    {
+        $this->isPublish = $isPublish;
 
         return $this;
     }

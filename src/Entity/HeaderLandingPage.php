@@ -41,10 +41,15 @@ class HeaderLandingPage
     private $image;
 
     /**
-     * @ORM\OneToOne(targetEntity="App\Entity\LandignPage", inversedBy="headerLandingPage", cascade={"persist", "remove"})
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\ManyToOne(targetEntity="App\Entity\LandignPage", inversedBy="headerLandingPages")
      */
     private $landingPage;
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $isPublish;
+
 
     public function getId(): ?int
     {
@@ -78,9 +83,21 @@ class HeaderLandingPage
         return $this->landingPage;
     }
 
-    public function setLandingPage(LandignPage $landingPage): self
+    public function setLandingPage(?LandignPage $landingPage): self
     {
         $this->landingPage = $landingPage;
+
+        return $this;
+    }
+
+    public function getIsPublish(): ?bool
+    {
+        return $this->isPublish;
+    }
+
+    public function setIsPublish(bool $isPublish): self
+    {
+        $this->isPublish = $isPublish;
 
         return $this;
     }

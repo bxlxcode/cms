@@ -18,6 +18,8 @@ class OffreLandingPageType extends AbstractType
     {
         $builder
             ->add('image')
+            ->add('isPublish')
+
 
 
             /*
